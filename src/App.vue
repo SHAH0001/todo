@@ -4,15 +4,15 @@
       <nav class="nav">
         <router-link class="logo" to="/">Main page</router-link>
         <ul class="nav-items">
-          <li>
-            <router-link to="/today" href="#">Today</router-link>
-          </li>
-          <li>
-            <router-link to="/work">Work</router-link>
-          </li>
-          <li>
-            <router-link to="/hobby">Hobby</router-link>
-          </li>
+          <router-link tag="li" exact to="/today" active-class="active">
+            <a class="nav-items-link">Today</a>
+          </router-link>
+          <router-link tag="li" to="/work" active-class="active">
+            <a class="nav-items-link">Work</a>
+          </router-link>
+          <router-link tag="li" to="/hobby" active-class="active">
+            <a class="nav-items-link">Hobby</a>
+          </router-link>
         </ul>
       </nav>
       <router-view />
@@ -26,6 +26,10 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+  }
+
+  .active {
+    border-bottom: 1px solid #ccc;
   }
 
   .nav {
@@ -50,10 +54,10 @@
     list-style: none;
   }
 
-  .nav-items a {
+  .nav-items-link {
     text-decoration: none;
     color: black;
-    margin: 0 0 0 40px;
+    margin: 0 20px;
     padding: 20px;
   }
 

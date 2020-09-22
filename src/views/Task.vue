@@ -4,8 +4,6 @@
         <h3>{{task.name}}</h3>
         <label class="label-name">Category description</label>
         <p>{{task.description}}</p>
-        <label class="label-name">Name category</label>        
-        <p>{{task.category}}</p>
         <label class="label-name">Category status</label>
         <input @click="editStatus(task.id)" type="checkbox" v-model="task.status">
         <hr>
