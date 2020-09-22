@@ -2,7 +2,7 @@
     <div>
         <h3>Category {{nameCategory}}</h3>
         <div v-if="tasks.length">
-          <div v-for="(item, id) in tasks" :key="item.id">
+          <div v-for="item in tasks" :key="item.id">
                 <router-link 
                     class="task-link" 
                     :to="'/today/' + item.id"

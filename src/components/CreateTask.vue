@@ -4,11 +4,16 @@
             <div class="form-block">
                 <div class="form-group">
                     <label for="name">Name task</label>
-                    <input v-model="name" type="text" id="name">
+                    <input 
+                        v-model.trim="name" 
+                        type="text" 
+                        id="name"
+                        :class="{'error': nameError}"
+                    >
                 </div>
                 <div class="form-group">
                     <label for="description">Description task</label>
-                    <textarea v-model="description" class="form-group-textarea" id="description" cols="30" rows="10"></textarea>
+                    <textarea v-model.trim="description" class="form-group-textarea" id="description" cols="30" rows="10"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="status">Status task</label>
@@ -26,11 +31,17 @@ export default {
             name: '',
             description: '',
             status: false,
+            nameError: false,
         }
     },
     methods: {
         createTask() {
-            // console.log(this.nameCategory)
+            
+            if(this.name == '') {
+                this.nameError = true
+                return
+            }
+
             const task = {
                 id: Date.now(),
                 name: this.name,
@@ -76,6 +87,10 @@ export default {
         width: 100%;
         padding: 10px;
         cursor: pointer;
+    }
+
+    .error {
+        border: 1px solid red;
     }
 
 </style>
