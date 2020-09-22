@@ -1,18 +1,35 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div>
+        <div class="container">
+            <h3>Select a category</h3>
+            <ul class="categories">
+                <li><router-link to="/today">Today</router-link></li>
+                <li><router-link to="/work">Work</router-link></li>
+                <li><router-link to="/hobby">Hobby</router-link></li>
+            </ul>           
+        </div>
+    </div>
 </template>
-
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+<style>
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
   }
-}
-</script>
+
+  .categories {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .categories a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 20px;
+  }
+
+</style>
