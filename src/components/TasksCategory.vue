@@ -9,7 +9,7 @@
                 >
                     {{item.name}}
                 </router-link>
-                <input @click="editStatus(item.id, item.status)" type="checkbox" v-model="item.status">
+                <input @click="editStatus(item.id)" type="checkbox" v-model="item.status">
           </div>
         </div>
         <div v-else>No tasks</div>
@@ -18,13 +18,8 @@
 <script>
 export default {
     methods: {
-        editStatus(id, status) {
-            // console.log(id)
-            // console.log(status)
-            this.$store.dispatch('editStatus', {
-                id: id,
-                status: status
-            })
+        editStatus(id) {
+            this.$store.dispatch('editStatus', {id})
         }
     },
     computed: {
@@ -41,5 +36,10 @@ export default {
 }
 </script>
 <style>
-
+    .task-link {
+        text-decoration: none;
+        color: #000;
+        font-size: 30px;
+        margin-right: 40px;
+    }
 </style>

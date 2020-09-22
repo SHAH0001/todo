@@ -4,13 +4,20 @@
         <CreateTask
             :nameCategory="'work'"
         ></CreateTask>
+        <TasksCategory
+            :nameCategory="'work'"
+        >
+        </TasksCategory>
     </div>
 </template>
 <script>
 import CreateTask from '../components/CreateTask'
+import TasksCategory from '../components/TasksCategory'
+
 export default {
     components: {
-        CreateTask
+        CreateTask,
+        TasksCategory
     }
 }
 </script>

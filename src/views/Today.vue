@@ -30,12 +30,5 @@ export default {
     margin: 0 auto;
     padding: 0 15px;
   }
-
-  .task-link {
-    text-decoration: none;
-    color: #000;
-    font-size: 30px;
-    margin-right: 40px;
-  }
-
+  
 </style>

@@ -12,7 +12,7 @@ export default new Vuex.Store({
       state.tasks.push(task)
       localStorage.setItem('tasks', JSON.stringify(state.tasks))
     },
-    editStatus(state, {id, status}) {
+    editStatus(state, {id}) {
       const idx = state.tasks.findIndex(i => i.id === id)
       state.tasks[idx].status = state.tasks[idx].status = !state.tasks[idx].status
       localStorage.setItem('tasks', JSON.stringify(state.tasks))
