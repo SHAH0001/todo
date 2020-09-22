@@ -25,7 +25,12 @@ const routes = [
     path: '/work',
     name: 'Work',
     component: () => import('../views/Work.vue')
-  }
+  },
+  {
+    path: '/:category/:id',
+    name: 'Task',
+    component: () => import('../views/Task.vue')
+  },
 ]
 
 const router = new VueRouter({

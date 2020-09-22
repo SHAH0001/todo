@@ -17,6 +17,7 @@
       </nav>
       <router-view />
     </div>
+    <footer style="height: 250px;"></footer>
   </div>
 </template>
 

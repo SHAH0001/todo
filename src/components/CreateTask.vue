@@ -38,7 +38,7 @@ export default {
                 category: this.nameCategory,
                 status: this.status
             }
-            console.log(task)
+            this.$store.dispatch('createTask', task)
         }
     },
     props: {
